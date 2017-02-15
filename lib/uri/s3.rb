@@ -4,8 +4,5 @@ require 'uri'
 module URI
   class S3 < Generic
     URI.scheme_list.merge!("S3" => URI::S3)
-
-    def bucket
-    end
   end
 end
