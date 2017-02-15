@@ -2,6 +2,10 @@ require_relative "s3/version"
 require 'uri'
 
 module URI
-  module S3
+  class S3 < Generic
+    URI.scheme_list.merge!("S3" => URI::S3)
+
+    def bucket
+    end
   end
 end
